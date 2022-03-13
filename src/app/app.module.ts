@@ -8,6 +8,7 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoDatabindingComponent } from './two-databinding/two-databinding.component';
 import {FormsModule} from "@angular/forms";
+import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {FormsModule} from "@angular/forms";
     Child2Component,
     PropertyBindingComponent,
     EventBindingComponent,
-    TwoDatabindingComponent
+    TwoDatabindingComponent,
+    StructureDirectiveComponent
   ],
   imports: [
     BrowserModule,FormsModule

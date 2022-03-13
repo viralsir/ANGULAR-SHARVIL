@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ANGULAR-SHARVIL';
   age:number =23;
+  eventbindingshow:boolean=false;
+  twobindingshow:boolean=false;
 
   display(){
     return "hello from display function";
@@ -20,5 +22,14 @@ export class AppComponent {
        return "you are eligable to vote";
      }
   }
-
+   showeventbindingbtnclicked()
+   {
+     this.eventbindingshow=true;
+     this.twobindingshow=false;
+   }
+   showtwobindingclicked()
+   {
+     this.twobindingshow=true;
+     this.eventbindingshow=false;
+   }
 }

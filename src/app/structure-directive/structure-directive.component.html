@@ -1,0 +1,41 @@
+<p>structure-directive works!</p>
+
+<!--
+<h1 *ngIf="show">Hello</h1>
+<h1 *ngIf="maths>35">Pass</h1>
+-->
+
+<h1>{{marks}}</h1>
+<table>
+  <tr><th>Maths </th></tr>
+  <tr *ngFor="let mark of marks">
+    <td>{{mark}}</td>
+  </tr>
+</table>
+<form>
+  Name : <input type="text" #name> <br/>
+  Maths : <input type="number" #maths> <br/>
+  Science : <input type="number" #sci> <br/>
+  English : <input type="number" #english> <br/>
+  <input type="submit" value="Add" (click)="addbtnclicked(name,maths,sci,english)">
+  <input type="reset" value="clear">
+
+</form>
+ <br/>
+Passing_Marks : <input type="text" [(ngModel)]="passing_marks">
+<table>
+  <tr>
+    <th>Name</th> <th>Maths</th> <th>Science</th> <th>English</th> <th>Total</th><th>Pass/Fail</th></tr>
+  <tr *ngFor="let student of students">
+    <td>{{student.name}}</td>
+    <td>{{student.maths}}</td>
+    <td>{{student.sci}}</td>
+    <td>{{student.english}}</td>
+    <td>{{student.maths+student.sci+student.english}}</td>
+    <td>
+      {{student.pass_fail}}
+      <!--<span *ngIf="student.maths>35 && student.sci>35 && student.english>35">Pass</span>
+      <span *ngIf="student.maths<35 || student.sci<35 || student.english<35">Fail</span>-->
+    </td>
+  </tr>
+</table>
