@@ -12,7 +12,7 @@ export class StructureDirectiveComponent implements OnInit {
   constructor() { }
   marks:Array<number>=[23,33,44,55,66]
   students:Array<any>=[]
-  passing_marks:number=35
+  passing_marks:number=35;
 
   ngOnInit(): void {
   }

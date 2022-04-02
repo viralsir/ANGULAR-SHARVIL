@@ -7,8 +7,10 @@ import { Child2Component } from './child2/child2.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoDatabindingComponent } from './two-databinding/two-databinding.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
+import { TdfComponent } from './tdf/tdf.component';
+import { MdfComponent } from './mdf/mdf.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { StructureDirectiveComponent } from './structure-directive/structure-dir
     PropertyBindingComponent,
     EventBindingComponent,
     TwoDatabindingComponent,
-    StructureDirectiveComponent
+    StructureDirectiveComponent,
+    TdfComponent,
+    MdfComponent
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
