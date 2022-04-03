@@ -1,29 +1,33 @@
-<p>structure-directive works!</p>
+<!--<p>structure-directive works!</p>-->
 
 <!--
 <h1 *ngIf="show">Hello</h1>
 <h1 *ngIf="maths>35">Pass</h1>
 -->
 
-<h1>{{marks}}</h1>
+<!--<h1>{{marks}}</h1>
 <table>
   <tr><th>Maths </th></tr>
   <tr *ngFor="let mark of marks">
     <td>{{mark}}</td>
   </tr>
-</table>
-<form>
-  Name : <input type="text" #name> <br/>
-  Maths : <input type="number" #maths> <br/>
-  Science : <input type="number" #sci> <br/>
-  English : <input type="number" #english> <br/>
-  <input type="submit" value="Add" (click)="addbtnclicked(name,maths,sci,english)">
-  <input type="reset" value="clear">
+</table>-->
 
-</form>
- <br/>
-Passing_Marks : <input type="text" [(ngModel)]="passing_marks">
-<table>
+<div class="row">
+       <div class="col-2"></div>
+       <div class="col-4">
+         <form>
+            Name : <input type="text" class="form-control" #name> <br/>
+            Maths : <input type="number" class="form-control" #maths> <br/>
+            Science : <input type="number" class="form-control" #sci> <br/>
+            English : <input type="number" class="form-control"  #english> <br/>
+            <input type="submit"  class="btn btn-primary" value="Add" (click)="addbtnclicked(name,maths,sci,english)">
+            <input type="reset" class="btn btn-info" value="clear">
+
+          </form>
+       </div>
+       <div class="col-6">
+         <table  class="table table-dark">
   <tr>
     <th>Name</th> <th>Maths</th> <th>Science</th> <th>English</th> <th>Total</th><th>Pass/Fail</th></tr>
   <tr *ngFor="let student of students">
@@ -39,3 +43,11 @@ Passing_Marks : <input type="text" [(ngModel)]="passing_marks">
     </td>
   </tr>
 </table>
+       </div>
+</div>
+
+
+
+ <br/>
+Passing_Marks : <input type="text" class="form-control" [(ngModel)]="passing_marks">
+
