@@ -12,42 +12,45 @@
     <td>{{mark}}</td>
   </tr>
 </table>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Student Corner</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="entryclick()" href="#">Entry <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="viewclick()" href="#">View</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
 <div class="row">
-       <div class="col-2"></div>
-       <div class="col-4">
-         <form>
-            Name : <input type="text" class="form-control" #name> <br/>
-            Maths : <input type="number" class="form-control" #maths> <br/>
-            Science : <input type="number" class="form-control" #sci> <br/>
-            English : <input type="number" class="form-control"  #english> <br/>
-            <input type="submit"  class="btn btn-primary" value="Add" (click)="addbtnclicked(name,maths,sci,english)">
-            <input type="reset" class="btn btn-info" value="clear">
+       <div class="col-2">
+           Passing_Marks : <input type="text" class="form-control" [(ngModel)]="passing_marks">
 
-          </form>
        </div>
-       <div class="col-6">
-         <table  class="table table-dark">
-  <tr>
-    <th>Name</th> <th>Maths</th> <th>Science</th> <th>English</th> <th>Total</th><th>Pass/Fail</th></tr>
-  <tr *ngFor="let student of students">
-    <td>{{student.name}}</td>
-    <td>{{student.maths}}</td>
-    <td>{{student.sci}}</td>
-    <td>{{student.english}}</td>
-    <td>{{student.maths+student.sci+student.english}}</td>
-    <td>
-      {{student.pass_fail}}
-      <!--<span *ngIf="student.maths>35 && student.sci>35 && student.english>35">Pass</span>
-      <span *ngIf="student.maths<35 || student.sci<35 || student.english<35">Fail</span>-->
-    </td>
-  </tr>
-</table>
+       <div class="col-8">
+
+          <app-entry ></app-entry>
+          <app-view ></app-view>
+       </div>
+       <div class="col-2">
+
        </div>
 </div>
 
+<div class="row">
+  <div class="col-2">
 
+  </div>
+</div>
 
  <br/>
-Passing_Marks : <input type="text" class="form-control" [(ngModel)]="passing_marks">
 

@@ -11,6 +11,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { StructureDirectiveComponent } from './structure-directive/structure-directive.component';
 import { TdfComponent } from './tdf/tdf.component';
 import { MdfComponent } from './mdf/mdf.component';
+import { EntryComponent } from './entry/entry.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MdfComponent } from './mdf/mdf.component';
     TwoDatabindingComponent,
     StructureDirectiveComponent,
     TdfComponent,
-    MdfComponent
+    MdfComponent,
+    EntryComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule

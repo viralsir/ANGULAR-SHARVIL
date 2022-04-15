@@ -1,0 +1,12 @@
+ <table  class="table table-danger">
+  <tr>
+    <th>Name</th> <th>Maths</th> <th>Science</th> <th>English</th> <th>Total</th></tr>
+  <tr class="bg-success" *ngFor="let student of emps.recordlist">
+    <td>{{student.name}}</td>
+    <td>{{student.maths}}</td>
+    <td>{{student.science}}</td>
+    <td >{{student.english}}</td>
+    <td>{{student.maths+student.science+student.english}}</td>
+
+  </tr>
+</table>

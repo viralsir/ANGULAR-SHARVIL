@@ -13,6 +13,9 @@ export class StructureDirectiveComponent implements OnInit {
   marks:Array<number>=[23,33,44,55,66]
   students:Array<any>=[]
   passing_marks:number=35;
+  displayform:boolean=false;
+  displaytable:boolean=false;
+
 
   ngOnInit(): void {
   }
@@ -23,7 +26,7 @@ export class StructureDirectiveComponent implements OnInit {
     new_student["maths"]=eval(maths.value);
     new_student["sci"]=eval(sci.value);
     new_student["english"]=eval(english.value);
-    if(new_student.maths>this.passing_marks && new_student.sci>this.passing_marks && new_student.english>this.passing_marks)
+    if(new_student.maths>=this.passing_marks && new_student.sci>=this.passing_marks && new_student.english>=this.passing_marks)
     {
       new_student["pass_fail"]="Pass"
     }
@@ -35,5 +38,15 @@ export class StructureDirectiveComponent implements OnInit {
     this.students.push(new_student)
 
   }
+
+  entryclick(){
+    this.displayform=true;
+    this.displaytable=false;
+  }
+  viewclick(){
+    this.displayform=false;
+    this.displaytable=true;
+  }
+
 
 }

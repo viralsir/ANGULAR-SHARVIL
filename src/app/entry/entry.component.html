@@ -1,0 +1,37 @@
+<form [formGroup]="entryformRef" (ngSubmit)="addbtnclicked()" >
+            Name : <input type="text" class="form-control" formControlName="name"> <br/>
+            Maths : <input type="number" class="form-control" formControlName="maths"> <br/>
+            Science : <input type="number" class="form-control" formControlName="science"> <br/>
+            English : <input type="number" class="form-control"  formControlName="english"> <br/>
+            <input type="submit"  class="btn btn-primary" value="Add">
+            <input type="reset" class="btn btn-info" value="clear">
+
+</form>
+<h1>{{msg}}</h1>
+
+<!--
+   IOC   : inversion of Control
+   Signleton Object
+
+    Model (class/interface) { name:string, maths:number,english:number}
+    Service  class {  array<model>[]   storedata(),viewdata(),updatedata()}
+
+     Service Object  -
+
+    provider[]
+    class Empservice{
+        employeelist=[]
+        storedata(){}
+        viewdata(){}
+}
+
+dependency injection   (EmpService e1)
+
+Model
+Service
+Controller (entry,view)
+-->
+
+
+
+
