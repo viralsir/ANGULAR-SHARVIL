@@ -13,6 +13,8 @@ import { TdfComponent } from './tdf/tdf.component';
 import { MdfComponent } from './mdf/mdf.component';
 import { EntryComponent } from './entry/entry.component';
 import { ViewComponent } from './view/view.component';
+import {HttpClientModule} from "@angular/common/http";
+import { PostviewComponent } from './postview/postview.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,11 @@ import { ViewComponent } from './view/view.component';
     TdfComponent,
     MdfComponent,
     EntryComponent,
-    ViewComponent
+    ViewComponent,
+    PostviewComponent
   ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule
+    BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
