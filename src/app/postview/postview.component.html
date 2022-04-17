@@ -1,0 +1,15 @@
+<input type="button" value="post data" class="btn btn-primary" (click)="viewpostdata()">
+<table class="table table-primary">
+    <tr>
+      <th>User Id </th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+    <tr *ngFor="let post of postlist">
+      <td>{{post.userId}}</td>
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td>{{post.body}}</td>
+    </tr>
+</table>
