@@ -15,6 +15,15 @@ import { EntryComponent } from './entry/entry.component';
 import { ViewComponent } from './view/view.component';
 import {HttpClientModule} from "@angular/common/http";
 import { PostviewComponent } from './postview/postview.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MateiralDemoComponent } from './mateiral-demo/mateiral-demo.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -29,11 +38,13 @@ import { PostviewComponent } from './postview/postview.component';
     MdfComponent,
     EntryComponent,
     ViewComponent,
-    PostviewComponent
+    PostviewComponent,
+    ParentComponent,
+    ChildComponent,
+    MateiralDemoComponent
   ],
   imports: [
-    BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule
-  ],
+    BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatDatepickerModule],
   providers: [],
   bootstrap: [AppComponent]
 })
